@@ -39,6 +39,7 @@ public class Driver {
                 driver = new ChromeDriver();
             }
         }
+
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         return driver;
@@ -52,7 +53,7 @@ public class Driver {
 
     public static void wait(int secs) {
         try {
-            Thread.sleep(1000 * secs);
+            Thread.sleep(1000L * secs);
         } catch (InterruptedException e) {
             e.printStackTrace();
         } catch (TimeoutException e) {
